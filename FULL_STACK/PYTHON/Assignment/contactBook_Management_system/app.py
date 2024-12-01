@@ -1,7 +1,7 @@
 import add_contacts
 import view_contacts
 
-contacts = []
+all_contacts = []
 
 while True:
     print("Welcome to Contact Book ")
@@ -17,10 +17,11 @@ while True:
         break
     elif option == '1':
         print("Add contact: ")
-        contacts = add_contacts.add_contact(contacts)
+        contacts = add_contacts.add_contact(all_contacts)
+        print(contacts)
     elif option == '2':
         print("View all your contacts")
-        contacts = view_contacts.view_contacts(contacts)
+        contacts = view_contacts.view_contacts(all_contacts)
 
     elif option == '3':
         print("Delete a contact")

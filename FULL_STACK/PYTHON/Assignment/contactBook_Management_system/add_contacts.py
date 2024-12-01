@@ -1,7 +1,7 @@
 
 from save_contacts import save_contacts
 
-def add_contact(contacts):
+def add_contact(all_contacts):
     
     name = input("Name of the Contact person: ")
     if name.isalpha() == True:
@@ -27,19 +27,18 @@ def add_contact(contacts):
 
     address = input("Address of the Contact person: ")
 
-    contacts
-    {
+    contacts ={
         "name":name,
         "phone_no":phone_no,
         "email":email,
         "address": address
     }
 
-    contacts.append(contacts)
-    save_contacts(contacts)
+    all_contacts.append(contacts)
+    save_contacts(all_contacts)
 
     print("Successfully added contact")
 
-    return contacts
+    return all_contacts
 
 
