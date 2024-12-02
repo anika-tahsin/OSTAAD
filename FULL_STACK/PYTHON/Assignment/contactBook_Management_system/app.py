@@ -1,5 +1,7 @@
 import add_contacts
 import view_contacts
+import delete_contact
+import search_contact
 
 all_contacts = []
 
@@ -9,6 +11,7 @@ while True:
     print("1. Add Contact")
     print("2. View all contacts")
     print("3. Delete contact")
+    print("4. Search contact")
 
     option = input("Please choose your option from the above list: ")
 
@@ -24,6 +27,11 @@ while True:
         contacts = view_contacts.view_contacts(all_contacts)
 
     elif option == '3':
-        print("Delete a contact")
+        contacts = delete_contact.delete_contact(all_contacts)
+        print("Deleted contact")
+    
+    elif option == '4':
+        contacts = search_contact.search_contact(all_contacts)
+        print("The contact you are looking for is:\n")
     else:
         print("Please choose options from 0 to 3 only")
