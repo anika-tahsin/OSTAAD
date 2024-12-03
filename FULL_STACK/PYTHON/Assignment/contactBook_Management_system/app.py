@@ -21,7 +21,7 @@ while True:
     elif option == '1':
         print("Add contact: ")
         contacts = add_contacts.add_contact(all_contacts)
-        print(contacts)
+        print(all_contacts)
     elif option == '2':
         print("View all your contacts")
         contacts = view_contacts.view_contacts(all_contacts)
