@@ -16,6 +16,7 @@
 #             print("File created successfully")
 #     return all_contacts
           
+
 import os
 def save_contacts(all_contacts):
     current_dir = os.path.dirname(__file__)
@@ -24,3 +25,17 @@ def save_contacts(all_contacts):
         for contact in all_contacts:
             lineWriter = f"{contact['name']},{contact['phone_no']},{contact['email']},{contact['address']}\n"
             file.write(lineWriter)
+
+""" 
+import csv
+
+def save_contacts(filename, contacts):
+    """
+    #Save all contacts to a CSV file.
+    """
+    with open(filename, mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(["Name", "Phone", "Email", "Address"])  # Header row
+        writer.writerows(contacts)
+
+"""
