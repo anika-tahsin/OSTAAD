@@ -3,9 +3,9 @@ import view_contacts
 import delete_contact
 import search_contact
 
-all_contacts = []
-#all_contacts = view_contacts.view_contacts(all_contacts)
-print(all_contacts)
+#all_contacts = []
+all_contacts = view_contacts.view_contacts()
+#print(all_contacts)
 
 while True:
     print("Welcome to Contact Book ")
@@ -21,8 +21,7 @@ while True:
         print("Thanks for using Contact Book")
         break
     elif option == '1':
-        print("View all your contacts")
-        contacts = view_contacts.view_contacts(all_contacts)
+        contacts = view_contacts.display_contacts(all_contacts)
         
     elif option == '2':
         print("Add contact: ")
@@ -30,11 +29,14 @@ while True:
         print(all_contacts)
 
     elif option == '3':
-        contacts = delete_contact.delete_contact(all_contacts)
-        print("Deleted contact")
+        print("Delete contact")
+        contacts = delete_contact.delete_contact()
+        
     
     elif option == '4':
-        contacts = search_contact.search_contact(all_contacts)
-        print("The contact you are looking for is:\n")
+        print("\nSearch contact: ")
+        contact = search_contact.search_contact()
+       
+            
     else:
         print("Please choose options from 0 to 3 only")

@@ -25,7 +25,7 @@ def add_contact(all_contacts):
         print("Enter correct email format")
         email = input("Email ID of the Contact person: ")
 
-    address = input("Address of the Contact person: ")
+    address = input("Address of the Contact person: ").strip()
 
     contacts ={
         "name":name,
@@ -37,7 +37,7 @@ def add_contact(all_contacts):
     all_contacts.append(contacts)
     save_contacts(all_contacts)
 
-    print("Successfully added contact")
+    print("Successfully added contact {name}")
 
     return all_contacts
 
