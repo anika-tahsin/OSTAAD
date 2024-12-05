@@ -3,9 +3,9 @@ import view_contacts
 import delete_contact
 import search_contact
 
-#all_contacts = []
+
 all_contacts = view_contacts.view_contacts()
-#print(all_contacts)
+
 
 while True:
     print("Welcome to Contact Book ")
