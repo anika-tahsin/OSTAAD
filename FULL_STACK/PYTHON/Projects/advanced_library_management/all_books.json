@@ -1,0 +1,26 @@
+[
+    {
+        "title": "b1",
+        "author": "a1",
+        "isbn": 32457,
+        "year": 2015,
+        "price": 190,
+        "quantity": 11,
+        "bookAddedAt": "13-12-2024 17:55:46",
+        "booklastUpdatedAt": "13-12-2024 18: 40: 06",
+        "bookBorrowedAt": "13-12-2024 18: 47: 55",
+        "bookReturnedAt": "13-12-2024 18: 56: 14"
+    },
+    {
+        "title": "b3",
+        "author": "a3",
+        "isbn": 22402,
+        "year": 2013,
+        "price": 200,
+        "quantity": 10,
+        "bookAddedAt": "13-12-2024 17:58:42",
+        "booklastUpdatedAt": "13-12-2024 18: 40: 28",
+        "bookBorrowedAt": "13-12-2024 18: 48: 06",
+        "bookReturnedAt": "13-12-2024 18: 55: 59"
+    }
+]
