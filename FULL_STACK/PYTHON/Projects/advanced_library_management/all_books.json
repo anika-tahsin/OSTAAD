@@ -5,11 +5,15 @@
         "isbn": 32457,
         "year": 2015,
         "price": 190,
-        "quantity": 11,
+        "quantity": 9,
         "bookAddedAt": "13-12-2024 17:55:46",
         "booklastUpdatedAt": "13-12-2024 18: 40: 06",
-        "bookBorrowedAt": "13-12-2024 18: 47: 55",
-        "bookReturnedAt": "13-12-2024 18: 56: 14"
+        "bookBorrowedAt": "13-12-2024 19: 55: 50",
+        "bookReturnedAt": "13-12-2024 19: 56: 01",
+        "dueDate": "12-01-2025",
+        "name": "borrower3",
+        "phone": "34536",
+        "bookBorrowed": "b1"
     },
     {
         "title": "b3",
@@ -17,10 +21,14 @@
         "isbn": 22402,
         "year": 2013,
         "price": 200,
-        "quantity": 10,
+        "quantity": 9,
         "bookAddedAt": "13-12-2024 17:58:42",
         "booklastUpdatedAt": "13-12-2024 18: 40: 28",
-        "bookBorrowedAt": "13-12-2024 18: 48: 06",
-        "bookReturnedAt": "13-12-2024 18: 55: 59"
+        "bookBorrowedAt": "13-12-2024 19: 54: 38",
+        "bookReturnedAt": "13-12-2024 19: 54: 51",
+        "dueDate": "12-01-2025",
+        "name": "borrower2",
+        "phone": "2345",
+        "bookBorrowed": "b3"
     }
 ]

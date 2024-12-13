@@ -15,14 +15,40 @@ def borrow_book(all_books):
     
     for book in all_books:
         if book['title'].lower() == search_book.lower():
-            if book['quantity'] > 0:
+            if book['quantity'] != 0:
+                name = input("Enter Borrower Name: ")
+                phone = input("Enter Borrower Phone no: ")
                 book['quantity'] -= 1
-                book['bookBorrowedAt'] = datetime.datetime.now().strftime("%d-%m-%Y %H: %M: %S")
+        
                 
                 save_books.save_book(all_books)
-                print(f"You have successfully borrowed a book '{book['title']}'")
+
+                borrower_data = {
+                    "name": name,
+                    "phone": phone,
+                    "bookBorrowed": book['title'],
+                    "borrowedAt": datetime.datetime.now().strftime("%d-%m-%Y %H: %M: %S"),
+                    "dueDate": (datetime.datetime.now() + datetime.timedelta(days=30)).strftime("%d-%m-%Y")
+                }
+
+                borrower_file_path = os.path.join(current_dir,"borrower_info.json")
+
+                if os.path.exists(borrower_file_path):
+                    with open(file_path, "r") as borrower_file:
+                        borrowers = json.load(borrower_file)
+                else:
+                    borrowers = []
+                
+                borrowers.append(borrower_data)
+
+                with open(borrower_file_path, "w") as borrower_file:
+                    json.dump(borrowers, borrower_file, indent=4)
             
+                print(f"You have successfully borrowed a book '{book['title']}'")
+                print(f"Return it by {book['dueDate']}.")
+
                 return all_books
+            
             else:
-                print(f"Oh! the book '{book['title']}' is not available")
+                print(f"There are not enough book '{book['title']}' available to lend")
                 return all_books

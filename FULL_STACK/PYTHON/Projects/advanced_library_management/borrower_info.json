@@ -1,0 +1,9 @@
+[
+    {
+        "name": "borrower1",
+        "phone": "123314",
+        "bookBorrowed": "b1",
+        "borrowedAt": "13-12-2024 20: 05: 11",
+        "dueDate": "12-01-2025"
+    }
+]

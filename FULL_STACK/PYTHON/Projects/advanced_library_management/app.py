@@ -5,6 +5,7 @@ import view_books
 import load_books
 import borrow_book
 import return_book
+import view_borrower
 
 all_book = []
 
@@ -17,6 +18,7 @@ while True:
     print("4. View All Books")
     print("5. Borrow Book")
     print("6. Return Book")
+    print("7. Borrower Information")
 
     all_book = load_books.reload_all_books(all_book)
 
@@ -49,5 +51,9 @@ while True:
     # Return Book
     elif menu == "6":
         all_book = return_book.return_a_book(all_book)
+
+    # Borrower Information
+    elif menu == "7":
+        borrower  = view_borrower.view_borrower()
     else:
         print("Choose a valid number")
